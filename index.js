@@ -1,6 +1,21 @@
 function hasTargetSum(array, target) {
+
+  //Iterate through each number in the array 
+  for (let i = 0; i < array.length; i++) {
+  //For the current number identify complement that adds to target (compliment = target - number)
+  const complement = target - array[i]
+    //iterate through the rest of the array
+  for (let j = i + 1; j < array.length; j++) {
+  //check if any number is our compliemnt
+  if (array[j] === complement) return true 
+  //if so return true 
+  //If I reach the end of the array, return false 
+      if (array[j] === complement) return true
+    }
+  }
+  return false 
+    }
   // Write your algorithm here
-}
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,7 +23,13 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
+  Iterate through each number in the array 
+  For the current number identify complement that adds to target (compliment = target - number)
+  iterate through the rest of the array
+  check if any number is our compliemnt
+  if so return true 
+  If I reach the end of the array, return false 
+  */
 
 /*
   Add written explanation of your solution here
